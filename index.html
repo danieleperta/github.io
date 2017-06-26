@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="stylesheet" href="style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="anime.min.js"></script>
+<script src="JQUERY.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Product+Sans:400,700' rel='stylesheet' type='text/css'>
+<script src="anima.js"></script>
+<script src="jquery.mousewheel.js"></script>
+<title>Daniele Perta | Percorso</title>
+<script>
+	$(function(){
+
+		$(".cont_all").mousewheel(function(event, delta) {
+
+			this.scrollLeft -= (delta * 30);
+			event.preventDefault();
+		});
+	});
+	</script>
+</head>
+<body>
+
+<div class="changer"  id="changeuno"	style="background-color: #FF5E5B;"></div>
+<div class="changer" id="changedue"	style="background-color: #EF476F;"></div>
+<div class="changer" id="changetre"	style="background-color: #FFD166;"></div>
+
+<div class="home">
+
+<div class="pallino"></div>
+
+<span class="name">Daniele Perta <br><span style="font-size: 15px; color: #7f7f7f;">5 E Informatica</span></span>
+
+<span class="titolotesi" >Tecnologie di<br> comunicazione<br>& sviluppo</span>
+
+
+<div class="cont_all">
+
+<div class="materiacont" id="italiano">
+
+<div class="materia" data-tilt  style="background-image: url(svevo.jpg); top: ;"><div class="loader" style="background-color: #e0414e;"></div><div class="opa"></div><span class="titmateria">Italiano<br><span style="font-size: 17px;font-family: 'Space Mono', monospace;">svevo</span></span></div>			</div>
+
+<div class="materiacont" id="storia">
+<div class="materia" data-tilt   style="background-image: url(storia.jpg);"><div class="loader" style="background-color: #9ab3c0;"></div><div class="opa"></div><span class="titmateria">Storia<br><span style="font-size: 17px;font-family: 'Space Mono', monospace;">guerra e mass media</span></span></div></div>
+
+<div class="materiacont" id="matematica">
+<div class="materia" data-tilt   style="background-image: url(mate.jpg);"><div class="loader" style="background-color: #054264;"></div><div class="opa"></div><span class="titmateria" >Matematica<br><span style="font-size:17px;font-family: 'Space Mono', monospace;">poligoni</span></span></div></div>
+
+
+<div class="materiacont" id="gestione">
+<div class="materia" data-tilt   style="background-image: url(gestio.jpg);"><div class="loader" style="background-color: #54d7aa;"></div><div class="opa"></div><span class="titmateria" >Gestione<br><span style="font-size: 17px;font-family: 'Space Mono', monospace;">Progettazione di dettaglio</span></span></div></div>
+
+<div class="materiacont" id="tps">
+<div class="materia" data-tilt  style="background-image: url(tdp.jpg);"><div class="loader" style="background-color: #ffd166;"></div><div class="opa"></div><span class="titmateria">TPS<br><span style="font-size: 17px;font-family: 'Space Mono', monospace;">html - css</span></span></div></div>
+
+<div class="materiacont" id="english">
+<div class="materia" data-tilt   style="background-image: url(jss.jpg);"><div class="loader" style="background-color: #FF5E5B;"></div>
+<div class="opa"></div><span class="titmateria" >English<br><span style="font-size: 17px;font-family: 'Space Mono', monospace;">javascript</span></span></div></div>
+
+<div class="materiacont" id="informatica">
+<div class="materia" data-tilt  style="background-image: url(info.jpg);"><div class="loader" style="background-color: #AA4567;"></div><div class="opa"></div><span class="titmateria">Informatica<br><span style="font-size: 17px;font-family: 'Space Mono', monospace;">php</span></span></div>
+</div>
+
+<div class="materiacont" id="sistemi">
+<div class="materia" data-tilt  style="background-image: url(sist.jpg);"><div class="loader" style="background-color: #0A2342;"></div><div class="opa"></div><span class="titmateria">Sistemi<br><span style="font-size: 17px;font-family: 'Space Mono', monospace;">crittografia e SSL</span></span></div></div>
+
+
+
+
+</div>
+
+
+</div>
+
+<script src="tilt.js"></script> <!-- Load Tilt.js library -->
+<script src="anima.js"></script>
+</body>
+</html>

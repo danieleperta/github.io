@@ -1,0 +1,150 @@
+
+
+
+hmtl,body{
+	margin: 0;
+		height: 100%;
+		overflow:scroll;
+		-webkit-font-smoothing: antialiased;
+	}
+
+
+.head_desc{
+	width: 100%;
+	height: 0px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items:center ;
+	flex-direction: column;
+	position: fixed;
+	transition: 800ms all ease-in-out;
+}
+
+.title_mat
+{
+	font-size: 60px;
+	color: white;
+	font-family: "Product Sans";
+
+	position: relative;
+
+}
+
+.subtitle_mat
+{
+	font-size: 20px;
+	color: white;
+font-family: 'Space Mono', monospace;
+
+	position: relative;
+
+}
+
+
+.content{
+	width: 100%;
+	position: relative;
+	top: 360px;
+
+left: -100%;
+	background-color: white;
+	transition: 800ms all ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction: column;
+}
+
+.back{
+	font-size: 15px;
+		color: white;
+	font-family: "Product Sans";
+	cursor: pointer;
+	position: relative;
+	left: 20px;
+}
+
+
+.hightext{
+	width: 60%;
+margin-top: 30px;
+font-family: 'Open Sans', sans-serif;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+flex-direction: column;
+text-align: justify;
+}
+
+.changer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+transition: 1s all ease-in-out;
+	top: 0;
+	left: 0%;
+	    z-index: 1001;
+}
+
+.margine{
+	margin-bottom:20px;
+}
+
+.marginetop{
+	margin-top:20px;
+}
+.cifrarioo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+input:focus{
+ outline:none;
+}
+
+input{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	border: none;
+	background-color: #f2f2f2;
+		font-family: "Product Sans";
+		font-size:17px;
+}
+
+.buttone{
+font-size:17px;
+	font-family: "Product Sans";
+color: white;
+background-color:#828282;
+
+}
+
+iframe{
+	border: none;
+	width: 100% !important;
+height: 50% !important;
+}
+
+img{max-width: 100% !important;}
+
+.cont_text{
+	width: 100%;
+}
+
+.homeback{z-index: 1000;	transition: 300ms all ease-in-out;width: 100%;height: 0px;position: fixed;top: 0;display: flex;justify-content: flex-start;align-items: center;}
+.layer{width: 100%;height: 100%; background-color: rgba(0,0,0,0.7);position: absolute;top: 0;}
+.trasparent{background-color: transparent !important;}
+
+@media(max-width:650px){
+.hightext{width: 80%;
+}
+
+}

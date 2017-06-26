@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="style.css" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="stylesheet" href="materia.css" />
+<script src="anime.min.js"></script>
+<script src="JQUERY.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Product+Sans:400,700' rel='stylesheet' type='text/css'>
+<script src="anima.js"></script>
+
+<script type="text/javascript">
+function Cifra(chiaro, cifrato, sposta){
+	alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	chiaro.value = chiaro.value.toUpperCase();
+	cifrato.value = "";
+	if (sposta.value.length > 0) {
+		diff = parseInt(sposta.value);
+	} else {
+		diff = 0;
+	}
+	for(var conta = 0; conta < chiaro.value.length; conta++){
+		ch  = chiaro.value.charAt(conta);
+		if (ch >= 'A' & ch <= 'Z') {
+			ord = alfabeto.indexOf(ch);
+			ord = (ord + diff) % 26;
+			cifrato.value += alfabeto.charAt(ord);
+		}
+	}
+}</script>
+
+<title>Daniele Perta | Percorso -- SISTEMI</title>
+</head>
+<body>
+<div class="changer" id="changetre"	style="background-color: #FFD166;"></div>
+<div class="homeback trasparent" style="background-color: #0A2342;">
+<span class="back" onclick="location.href='index.html';">back to home</span></div>
+<div class="head_desc"  style="background-color: #0A2342;background-image:url(sist.jpg);"><div class="layer"></div><span class="title_mat">Sistemi</span><span class="subtitle_mat">Crittografia</span></div>
+
+<div class="content">
+
+<div class="hightext"><span class="cont_text">Ipotizziamo che due persone vogliano scambiarsi a distanza informazioni che devono restare riservate: il messaggio scambiato non deve essere accessibile a terze persone. Quando ciò si verifica diremo che il canale di trasmissione è sicuro, anche se nessun canale può considerarsi veramente sicuro.<br>
+	Il mittente deve quindi cercare di mantenere la riservatezza “nascondendo” l’informazione contenuta nel messaggio e per fare ciò adopera un sistema di cifratura che trasforma il testo in chiaro (plain text) in un crittogramma (cyper text), apparentemente privo di significato e tale che solamente al legittimo destinatario sia possibile estrarre l’informazione trasmessa. <br>Se il canale di trasmissione non è sicuro una terza persona (avversario/opponent) può cercare di intercettare il messaggio e decifrarlo (ruolo passivo) o, addirittura, di intromettere suoi messaggi nel canale(ruolo attivo).<br>
+	Il sistema funziona se mittente e destinatario condividono un segreto di cui l’avversario non deve essere a conoscenza: questo segreto costituisce la chiave del sistema.
+</span>
+
+<span class="cont_text"><br><br><br><br>La crittografia moderna si differenzia notevolmente dalla crittografia di cui si è parlato fin ora; l’avvento dei computer infatti ha rivoluzionato profondamente sia i sistemi crittografici sia il modo di vedere e utilizzare la crittografia.<br> Molti sistemi crittografici analizzati in precedenza e considerati ragionevolmente sicuri fino al XIX sec, possono oggi essere forzati in tempi brevissimi grazie alla velocità di elaborazione del computer.<br> Inoltre possono essere ora utilizzati sistemi crittografici molto complessi e che, un tempo, avrebbero richiesto tempi di cifratura troppo lunghi.<br>
+Le tecniche di crittografia attualmente utilizzate possono essere divise in due gruppi:<br><br>
+• crittografia Simmetrica<br>
+• crittografia Asimmetrica<br>
+</span>
+
+
+<span class="cont_text"><br><br><br><br><span class="highlight">La Crittografia Simmetrica<br><br></span>
+La crittografia a chiave simmetrica è un sistema di codifica convenzionale nel quale viene utilizzata una sola chiave per cifrare e decifrare i messaggi.<br> Il mittente e il destinatario devono conoscere la stessa chiave per potersi scambiare i messaggi in modo sicuro. La chiave può essere interpretata come un numero molto grande e la sua dimensione viene misurata in numero di bit<br>
+La struttura di un sistema crittografico simmetrico può quindi essere pensato in questo modo:<br>
+A(M,K) = C<br>
+A-1(C,K) = M<br>
+Dove A è l'algoritmo di cifratura, A-1 è l'algoritmo di decifratura M è il plaintext, C è il ciphertext e K è la chiave.<br>
+</span>
+
+<span class="cont_text"><br><br><br><br>
+<span class="highlight">La Crittografia Asimmetrica<br><br></span>
+La Crittografia Asimmetrica, chiamata anche crittografia a chiave pubblica è stata introdotta nel 1975 con l’obbiettivo di risolvere il problema della distribuzione sicura delle chiavi.<br> Il termine asimmetrica si riferisce al fato che il sistema utilizza una coppia di chiavi:<br>
+• una chiave pubblica che sarà disponibile a tutti e permetterà, a chi vuole inviare un messaggio sicuro all'utente, di utilizzarla come chiave di cifratura;<br>
+• una chiave privata, che deve essere segreta e conosciuta solamente dall'utente e con cui sarà possibile decifrare i messaggi cifrati con la propria Chiave Pubblica.<br>
+Le due chiavi sono correlate matematicamente, per cui i messaggi codificati con la chiave possono essere decodificati soltanto da chi possiede la chiave privata.<br> La particolarità e la forza di questo sistema crittografico è che, anche conoscendo la chiave pubblica non è possibile risalire alla corrispondente chiave privata.<br><br><br><br>I crittosistemi a chiave pubblica consentono di garantire:<br>
+• confidenzialità: il messaggio non potrà essere letto da nessuno al di fuori dei legittimi destinatari<br>
+• integrità: viene verificato che il messaggio, nel suo tragitto, non sia stato modificato da terzi<br>
+• autenticità: viene verificata l'identità del mittente del messaggio<br>
+</span>
+
+<span class="cont_text"><br><br><br><br>
+<span class="highlight">Crittografia nel commercio elettronico: il protocollo SSL<br><br></span>
+Quando compriamo qualche prodotto su un sito di e-commerce inseriamo negli appositi campi dei moduli, il numero della carta di credito con cui effettueremo il pagamento. E' evidente che è assolutamente necessario che quel numero arrivi a destinazione senza che nessuna persona possa intercettarlo e leggerlo.<br><br>
+Per risolvere questo problema è stato inventato “SSL”, Secure Socket Layer, un protocollo sviluppato da Netscape per la trasmissione cifrata delle informazioni su internet che utilizza la crittografia asimmetrica ed i certificati per garantire la confidenzialità e l'autenticità (anche reciproca).<br><br>
+Vediamo come funziona:<br>Il server del sito web deve innanzitutto richiedere un certificato ad una Certification Authority. (Zona Arancione) Invierà quindi alla CA la propria chiave pubblica ed i propri dati(1), questa li verificherà(2) e gli restituirà un certificato digitale firmato con la chiave privata della CA(3) che garantisce la corrispondenza fra la chiave ed il server.<br>
+Ora inizia la comunicazione fra il client ed il server:<br><br>
+
+Il Browser del utente si connette al server e invia la lista degli algoritmi di cifratura da lui supportati.<br><br><br>
+Il server web accetta la connessione del client, decide l'algoritmo che si utilizzerà e gli invia anche il proprio certificato digitale.<br><br>
+Il Browser utilizza la chiave pubblica della CA per verificare la validità del certificato, controlla che non sia stato revocato e che le informazioni riportate corrispondano al server a cui si cerca di accedere.<br><br>
+In caso il certificato risulti valido il Browser genera una chiave casuale, la cifra asimmetricamente con la Chiave Pubblica del server presente nel certificato e la invia.<br><br>
+Il server, con la propria Chiave Privata decifra la chiave casuale inviata  dal client.<br><br> A questo punto sia il client che il server possiedono la stessa  chiave che nessun altro può aver intercettato avendola firmata simmetricamente con la Chiave Pubblica del server.<br><br> Da qui in poi quella chiave diventa la “Chiave di Sessione” che verrà utilizzata per cifrare tutto il resto della comunicazione (compreso il numero di carta di credito) con l'algoritmo simmetrico definito all'inizio.<br><br>
+Se, in un'altra occasione si volesse accedere allo stesso server tramite una connessione cifrata il procedimento verrebbe seguito nuovamente dall'inizio generando un'altra chiave di sessione.<br><br><br>
+</span>
+
+
+
+<img src="ssl.png" alt="" />
+
+
+<span class="cont_text"><span class="highlight"><br><br><br>Il cifrario di Cesare<br><br></span>In crittografia il cifrario di Cesare è uno dei più antichi algoritmi crittografici di cui si abbia traccia storica. È un cifrario a sostituzione monoalfabetica in cui ogni lettera del testo in chiaro è sostituita nel testo cifrato dalla lettera che si trova un certo numero di posizioni dopo nell'alfabeto. Questi tipi di cifrari sono detti anche cifrari a sostituzione o cifrari a scorrimento a causa del loro modo di operare: la sostituzione avviene lettera per lettera, scorrendo il testo dall'inizio alla fine.<br><br><br>Il cifrario di Cesare prende il nome da Giulio Cesare, che lo utilizzava per proteggere i suoi messaggi segreti.<br> Grazie allo storico Svetonio sappiamo che Cesare utilizzava in genere una chiave di 3 per il cifrario, come nel caso della corrispondenza militare inviata alle truppe comandate da Quinto Tullio Cicerone.<br> Al tempo era sicuro perché gli avversari spesso non erano neanche in grado di leggere un testo in chiaro, men che mai uno cifrato;<br> inoltre non esistevano metodi di crittanalisi in grado di rompere tale codice, per quanto banale.<br>
+<br>
+Conosciamo anche altri che usarono questo cifrario al tempo di Cesare: Augusto, suo nipote, lo utilizzava con chiave 1, ma senza ripartire da sinistra in caso di fine dell'alfabeto. Quindi, scriveva B per A, C per B ma AA per X.<br>
+<br>
+Dalla scoperta dell'analisi delle frequenze da parte del matematico arabo Al-Kindi nell'XI secolo circa, tutti i cifrari di questo tipo sono divenuti molto semplici da rompere;<br> nessuno è adatto per comunicazioni sicure allo stato tecnologico attuale, né lo è stato negli ultimi 1000 anni.<br> Tuttavia, una forma di questo cifrario, chiamata ROT13, è ancora usata oggi per offuscare parti di un messaggio in modo da non renderle immediatamente comprensibili.<br><br>
+<b><span class="highlight">CIFRARIO DI CESARE:<br><br></span></b>
+</span>
+
+</div>
+
+<div class="cifrario">
+<form class="cifrarioo" id="myform" >
+<input type="text" name="chiaro" value="inserisci testo da cifrare"  size="64" class="margine marginetop inputt" class="ciao" id="claro" />
+<input type="text" name="sposta" value="2" size="2" class="margine" />
+<input type="button" name="" value="Cifra"  onclick="Cifra(chiaro, cifrato, sposta)" class="margine buttone" id/>
+<input type="text" name="cifrato" value="risultato"class="margine inputt" />
+</form>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+
+
+</script>
+<script type="text/javascript">
+$('.inputt').focus(function() {
+  var title = $(this).attr('value');
+  if ($(this).val() == title) {
+      $(this).val('');
+  }
+}).blur(function() {
+  var title = $(this).attr('value');
+  if ($(this).val() == '') {
+      $(this).val(title);
+  }
+});
+
+
+</script>
+<script src="tilt.js"></script> <!-- Load Tilt.js library -->
+<script src="anima.js"></script>
+<script src="materia.js"></script>
+</body>
+</html>
